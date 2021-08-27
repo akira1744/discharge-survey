@@ -271,8 +271,7 @@ if graph_set == '疾患別集計':
 fig = plt.figure(figsize=(10, 7.5), facecolor='1.0')
 ax = plt.axes()
 ax.tick_params(labelsize=8)
-rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio',
-                               'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP']
+#rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio','Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP']
 bar_list = ax.barh(x, y, color='0.7', label=graph_title)
 # ヘッダー、フッター
 ax.legend(loc='lower right', bbox_to_anchor=(0, 1), frameon=False,
