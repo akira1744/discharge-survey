@@ -49,7 +49,7 @@ mst_dpc = load_mst_dpc()
 mdc2df = load_mdc2df()
 mdc6df = load_mdc6df()
 
-st.markdown('# 患者数分析 (2019年度退院患者調査)')
+st.markdown('## 患者数分析 (2019年度退院患者調査)')
 
 col1, col2, col3 = st.columns([2, 2, 6])
 
@@ -62,7 +62,7 @@ col1.markdown('## 地域検索')
 prefsname = list(mst_hp['pref'].unique())
 #　@@@
 # select_prefs = col1.multiselect('都道府県', prefsname)
-select_prefs = col1.multiselect('都道府県', prefsname, default=['東京都','埼玉県'])
+select_prefs = col1.multiselect('都道府県', prefsname)
 
 if select_prefs != []:
     mst_hp = mst_hp.loc[mst_hp['pref'].isin(select_prefs)]
@@ -86,7 +86,7 @@ hpnames = list(mst_hp2['hp'].unique())
 
 # @@@
 # select_hp_number = col1.multiselect('医療機関名', hpnames)
-select_hp_name = col1.multiselect('医療機関名', hpnames, default=['社会医療法人財団石心会　埼玉石心会病院'])
+select_hp_name = col1.multiselect('医療機関名', hpnames)
 
 select_hp_number = []
 if select_hp_name != []:
