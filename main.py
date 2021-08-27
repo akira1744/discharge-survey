@@ -49,7 +49,7 @@ mst_dpc = load_mst_dpc()
 mdc2df = load_mdc2df()
 mdc6df = load_mdc6df()
 
-st.markdown('## 患者数分析 (2019年度退院患者調査)')
+st.markdown('# 患者数分析 (2019年度退院患者調査)')
 
 col1, col2, col3 = st.columns([2, 2, 6])
 
@@ -270,7 +270,7 @@ if graph_set == '疾患別集計':
 # グラフ #######################################################################
 fig = plt.figure(figsize=(10, 7.5), facecolor='1.0')
 ax = plt.axes()
-ax.tick_params(labelsize=9)
+ax.tick_params(labelsize=8)
 rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio',
                                'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP']
 bar_list = ax.barh(x, y, color='0.7', label=graph_title)
